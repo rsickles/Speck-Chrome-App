@@ -1,0 +1,23 @@
+{
+    "name": "Speck App",
+    "manifest_version": 2,
+    "version": "0.1",
+    "minimum_chrome_version": "37",
+    "app": {
+        "background": {
+            "scripts": [ "background.js"]
+        }
+    },
+    "icons": {
+                "128": "meter.png"
+             },
+    "permissions": [
+        "hid",
+        "tts",
+        {
+            "usbDevices": [
+                { "vendorId": 9044, "productId": 8738 }
+            ]
+        }
+    ]
+}
