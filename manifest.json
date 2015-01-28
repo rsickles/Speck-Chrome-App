@@ -16,7 +16,7 @@
         "tts",
         {
             "usbDevices": [
-                { "vendorId": 9044, "productId": 8738 }
+                { "vendorId": 9044, "productId": 13107 }
             ]
         }
     ]
