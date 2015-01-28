@@ -9,11 +9,11 @@ var myDevicePoll = function() {
   var size = 16;
 
   chrome.hid.receive(connectionId, function(reportId, data) {
-    if (data != null) {
+   // if (data != null) {
       // Convert Byte into Ascii to follow the format of our device
       //myText.value = arrayBufferToString(data);
       console.log('Data: ' + data);
-    }
+   // }
 
     setTimeout(myDevicePoll, 0);
   });
@@ -35,7 +35,7 @@ function initializeHid() {
       console.log('Connected to the HID device!');
       connectionId = connection.connectionId;
       console.log('This is the connection id' + connectionId);
-      var bytes = new Uint8Array(8);
+      var bytes = new Uint8Array(16);
       bytes[0] = "I".charCodeAt();
       for (var i = 1; i < bytes.length; ++i) {
            bytes[i] = 0;
